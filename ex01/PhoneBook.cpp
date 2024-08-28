@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ehedeman <ehedeman@student.42wolfsburg.    +#+  +:+       +#+        */
+/*   By: marlon <marlon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 13:30:22 by ehedeman          #+#    #+#             */
-/*   Updated: 2024/08/28 11:56:26 by ehedeman         ###   ########.fr       */
+/*   Updated: 2024/08/28 23:05:35 by marlon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -148,16 +148,16 @@ void	PhoneBook::display_single(int index)
 		usleep(500);
 	}
 	std::cout << "First Name: ";
-	print_contact_data(this->contacts[index].get_first_name());
+	std::cout << this->contacts[index].get_first_name();
 	std::cout << std::endl;
 	std::cout << "Lastt Name: ";
-	print_contact_data(this->contacts[index].get_last_name());
+	std::cout << this->contacts[index].get_last_name();
 	std::cout << std::endl;
 	std::cout << "Nick Name: ";
-	print_contact_data(this->contacts[index].get_nick_name());
+	std::cout << this->contacts[index].get_nick_name();
 	std::cout << std::endl;
 	std::cout << "Phone Number: ";
-	print_contact_data(this->contacts[index].get_phone_number());
+	std::cout << this->contacts[index].get_phone_number();
 	std::cout << std::endl;
 }
 
