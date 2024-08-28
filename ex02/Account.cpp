@@ -6,7 +6,7 @@
 /*   By: ehedeman <ehedeman@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/28 12:12:41 by ehedeman          #+#    #+#             */
-/*   Updated: 2024/08/28 13:11:24 by ehedeman         ###   ########.fr       */
+/*   Updated: 2024/08/28 13:47:33 by ehedeman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ Account::~Account( void )
 
 }
 
-
 //public functions
 int		Account::getNbAccounts( void ){return (_nbAccounts);}
 int		Account::getTotalAmount( void ){return (_totalAmount);}
@@ -32,18 +31,11 @@ int		Account::getNbWithdrawals( void ){return (_totalNbWithdrawals);}
 
 void	Account::displayAccountsInfos( void )
 {
-	int i = 0;
-
-	while (i < getNbAccounts())
-	{
-		Account::_displayTimestamp();
-		std::cout << "index:" << std::to_string(i);
-		std::cout << ";amount:" << std::to_string(Account::getTotalAmount());
-		std::cout << ";deposits:" << std::to_string(Account::getNbDeposits());
-		std::cout << ";withdrawals:" << std::to_string(Account::getNbWithdrawals());
-		std::cout << std::endl;
-		i++;
-	}
+	std::cout << "accounts:" << Account::getNbAccounts();
+	std::cout << ";total:" << Account::getTotalAmount();
+	std::cout << ";deposits:" << Account::getNbDeposits();
+	std::cout << ";withdrawals:" << Account::getNbWithdrawals();
+	std::cout << std::endl;
 }
 
 void	Account::makeDeposit(int deposit)
@@ -63,7 +55,11 @@ int		Account::checkAmount( void ) const
 
 void	Account::displayStatus( void ) const
 {
-
+	Account::_displayTimestamp();
+	std::cout << "index:" << this->_accountIndex;
+	std::cout << ";deposits:" << this->_nbDeposits;
+	std::cout << ";withdrawals:" << this->_nbWithdrawals;
+	std::cout << std::endl;
 }
 
 //private functions

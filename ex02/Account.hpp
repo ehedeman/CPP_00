@@ -44,14 +44,14 @@ private:
 	static int	_totalAmount;
 	static int	_totalNbDeposits;
 	static int	_totalNbWithdrawals;
-
+//info about all acounts
 	static void	_displayTimestamp( void );
 
 	int				_accountIndex;
 	int				_amount;
 	int				_nbDeposits;
 	int				_nbWithdrawals;
-
+//info about THIS account
 	Account( void );
 
 };
