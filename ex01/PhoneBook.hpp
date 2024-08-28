@@ -6,7 +6,7 @@
 /*   By: ehedeman <ehedeman@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 13:30:24 by ehedeman          #+#    #+#             */
-/*   Updated: 2024/08/26 14:46:49 by ehedeman         ###   ########.fr       */
+/*   Updated: 2024/08/28 11:55:21 by ehedeman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,10 @@
 # define PHONEBOOK_HPP
 
 #include "Contact.hpp"
+#include "PhoneBook_utils.hpp"
 #include <string>
 #include <iostream>
+#include <unistd.h>
 
 class PhoneBook {
 
@@ -24,17 +26,19 @@ private:
 	std::string		first_name;
 	std::string		last_name;
 	std::string		phone_number;
+	int				index; //index of what contact were currently looking at
 
 public:
 	PhoneBook();    //constructor
 	~PhoneBook(){};   //destructor
-	
-	void		add_contact();
-	void		remove_contact();
-	void		search_contact();
-	void		display_contact();
-	
-	void		exit(); //may not be nessecary
+
+	void		add();
+	void		search();
+	int			exit();
+	void		help();
+	int			display_all();
+	void		display_single(int index);
+	void		remove();
 };
 
 

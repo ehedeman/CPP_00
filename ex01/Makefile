@@ -6,12 +6,13 @@
 #    By: ehedeman <ehedeman@student.42wolfsburg.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/08/26 13:27:23 by ehedeman          #+#    #+#              #
-#    Updated: 2024/08/26 14:45:00 by ehedeman         ###   ########.fr        #
+#    Updated: 2024/08/27 13:00:07 by ehedeman         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = Contact.cpp		\
-		PhoneBook.cpp	\
+SRC = Contact.cpp				\
+		PhoneBook.cpp			\
+		PhoneBook_utils.cpp		\
 		main.cpp
 
 OBJS_DIR = objs/
