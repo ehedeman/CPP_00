@@ -31,7 +31,7 @@
 [19920104_091532] index:5;p_amount:0;deposit:23;amount:23;nb_deposits:1
 [19920104_091532] index:6;p_amount:754;deposit:9;amount:763;nb_deposits:1
 [19920104_091532] index:7;p_amount:16576;deposit:20;amount:16596;nb_deposits:1
-//something with the deposits + displayStatus
+//something with the deposits + displayStatus. p = previous
 
 
 [19920104_091532] accounts:8;total:21524;deposits:8;withdrawals:0
