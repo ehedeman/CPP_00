@@ -6,7 +6,7 @@
 /*   By: marlon <marlon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/28 12:12:41 by ehedeman          #+#    #+#             */
-/*   Updated: 2024/09/03 12:32:47 by marlon           ###   ########.fr       */
+/*   Updated: 2024/09/03 14:49:08 by marlon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,38 @@
 #include <ctime>
 #include <iomanip>
 
+int	Account::_nbAccounts = 0;
+int	Account::_totalAmount = 0;
+int Account::_totalNbDeposits = 0;
+int Account::_totalNbWithdrawals = 0;
+
 //apparently we have two cuz one is for call without input
 Account::Account( void ){}
 
 //constructor with input
 Account::Account( int initial_deposit)
 {
-
+	this->_nbDeposits = 0;
+	this->_nbWithdrawals = 0;
+	this->_amount = initial_deposit;
+	this->_totalAmount += this->_amount;
+	this->_accountIndex = this->_nbAccounts;
+	this->_nbAccounts += 1;
+	
+	_displayTimestamp();
+	std::cout << "index:" << this->_accountIndex << ";";
+	std::cout << "amount:" << this->_amount << ";";
+	std::cout << "created";
+	std::cout << std::endl;
 }
 //destructor->needs to print all ending values as well as state closed
 Account::~Account( void )
 {
-
+	_displayTimestamp();
+	std::cout << "index:" << this->_accountIndex << ";";
+	std::cout << "amount:" << this->checkAmount() << ";";
+	std::cout << "closed";
+	std::cout << std::endl;
 }
 
 //private functions
@@ -56,6 +76,7 @@ int		Account::getNbWithdrawals( void ){return (_totalNbWithdrawals);}
 
 void	Account::displayAccountsInfos( void )
 {
+	_displayTimestamp();
 	std::cout << "accounts:" << Account::getNbAccounts();
 	std::cout << ";total:" << Account::getTotalAmount();
 	std::cout << ";deposits:" << Account::getNbDeposits();
@@ -102,13 +123,14 @@ bool	Account::makeWithdrawal(int withdrawal)
 
 int		Account::checkAmount( void ) const
 {
-
+	return (this->_amount);
 }
 
 void	Account::displayStatus( void ) const
 {
 	_displayTimestamp();
 	std::cout << "index:" << this->_accountIndex;
+	std::cout << ";amount:" << this->_amount;
 	std::cout << ";deposits:" << this->_nbDeposits;
 	std::cout << ";withdrawals:" << this->_nbWithdrawals;
 	std::cout << std::endl;
