@@ -6,7 +6,7 @@
 /*   By: ehedeman <ehedeman@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 13:30:24 by ehedeman          #+#    #+#             */
-/*   Updated: 2024/08/28 11:55:21 by ehedeman         ###   ########.fr       */
+/*   Updated: 2024/09/09 13:39:07 by ehedeman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 #include <string>
 #include <iostream>
 #include <unistd.h>
+#include <cstdlib>
 
 class PhoneBook {
 

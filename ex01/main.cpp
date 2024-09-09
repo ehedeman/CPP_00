@@ -6,7 +6,7 @@
 /*   By: ehedeman <ehedeman@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 14:43:59 by ehedeman          #+#    #+#             */
-/*   Updated: 2024/08/27 14:25:51 by ehedeman         ###   ########.fr       */
+/*   Updated: 2024/09/09 13:39:25 by ehedeman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int main(int argc, char **argv)
 	}
 	std::string	buff;
 	PhoneBook	ph;
-
+	(void)argv;
 	while (!std::cin.eof())
 	{
 		std::cout << "How can we help?" << std::endl;
